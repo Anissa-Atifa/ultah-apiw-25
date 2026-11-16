@@ -179,9 +179,8 @@ function MultiPhotoSlider({
                   e.stopPropagation();
                   setCurrentIdx(idx);
                 }}
-                className={`h-2 rounded-full transition-all ${
-                  idx === safeIdx ? "w-5 bg-neonGreen" : "w-2 bg-zinc-500"
-                }`}
+                className={`h-2 rounded-full transition-all ${idx === safeIdx ? "w-5 bg-neonGreen" : "w-2 bg-zinc-500"
+                  }`}
               />
             ))}
           </div>
@@ -754,7 +753,7 @@ export default function BirthdayArcadePage() {
           </h1>
 
           <p className="font-terminal text-xl text-cyberCyan mt-3">
-            PLAYER 1: APIW • LEVEL 25 UNLOCKED • CO-OP SINCE 25.03.2025
+            PLAYER 1: APIW • LEVEL 25 UNLOCKED • CO-OP SINCE 25.03.2026
           </p>
 
           <p className="text-sm text-zinc-300 mt-4 max-w-md mx-auto leading-relaxed">
@@ -788,9 +787,8 @@ export default function BirthdayArcadePage() {
       {toast && (
         <div className="fixed top-4 right-4 z-50 max-w-sm bg-panel border-2 border-neonGreen text-zinc-100 px-4 py-3 rounded-2xl shadow-neonGreen flex items-center gap-3">
           <IconPixelHeart
-            className={`w-5 h-5 shrink-0 ${
-              toast.type === "error" ? "text-rose-500" : "text-neonGreen"
-            }`}
+            className={`w-5 h-5 shrink-0 ${toast.type === "error" ? "text-rose-500" : "text-neonGreen"
+              }`}
           />
           <span className="text-xs sm:text-sm font-medium">{toast.message}</span>
         </div>
@@ -830,11 +828,10 @@ export default function BirthdayArcadePage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`arcade-btn px-3.5 py-2 rounded-xl text-xs font-terminal tracking-wide ${
-                  activeTab === tab.id
-                    ? "bg-hotPink text-white shadow-hotPink"
-                    : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"
-                }`}
+                className={`arcade-btn px-3.5 py-2 rounded-xl text-xs font-terminal tracking-wide ${activeTab === tab.id
+                  ? "bg-hotPink text-white shadow-hotPink"
+                  : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"
+                  }`}
               >
                 {tab.label}
               </button>
@@ -868,11 +865,10 @@ export default function BirthdayArcadePage() {
                   setShowPinModal(true);
                 }
               }}
-              className={`arcade-btn inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-terminal border ${
-                isAdminUnlocked
-                  ? "bg-neonGreen/20 border-neonGreen text-neonGreen shadow-neonGreen"
-                  : "bg-panel border-zinc-700 text-zinc-200 hover:border-hotPink"
-              }`}
+              className={`arcade-btn inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-terminal border ${isAdminUnlocked
+                ? "bg-neonGreen/20 border-neonGreen text-neonGreen shadow-neonGreen"
+                : "bg-panel border-zinc-700 text-zinc-200 hover:border-hotPink"
+                }`}
             >
               <IconLockPin unlocked={isAdminUnlocked} className="w-3.5 h-3.5" />
               <span>{isAdminUnlocked ? "EDIT ON (250325)" : "PIN"}</span>
@@ -1108,7 +1104,7 @@ export default function BirthdayArcadePage() {
                     onClick={() => setShowPinModal(true)}
                     className="arcade-btn px-3.5 py-2 rounded-xl border border-zinc-700 text-xs font-terminal text-zinc-300 hover:border-neonGreen"
                   >
-                    Buka PIN (250325) untuk Tambah/Edit Cerita &amp; Foto
+                    {/* Buka PIN (250325) untuk Tambah/Edit Cerita &amp; Foto */}
                   </button>
                 )}
               </div>
@@ -1391,11 +1387,10 @@ export default function BirthdayArcadePage() {
                           key={option}
                           type="button"
                           onClick={() => setSelectedTimeOption(option)}
-                          className={`w-full text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all ${
-                            selectedTimeOption === option
-                              ? "bg-neonGreen/15 border-neonGreen text-white font-semibold"
-                              : "bg-void border-zinc-800 text-zinc-300 hover:border-zinc-600"
-                          }`}
+                          className={`w-full text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all ${selectedTimeOption === option
+                            ? "bg-neonGreen/15 border-neonGreen text-white font-semibold"
+                            : "bg-void border-zinc-800 text-zinc-300 hover:border-zinc-600"
+                            }`}
                         >
                           {selectedTimeOption === option ? "● " : "○ "}
                           {option}
@@ -1415,11 +1410,10 @@ export default function BirthdayArcadePage() {
                           key={spot}
                           type="button"
                           onClick={() => setSelectedSpotOption(spot)}
-                          className={`w-full text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all ${
-                            selectedSpotOption === spot
-                              ? "bg-hotPink/15 border-hotPink text-white font-semibold"
-                              : "bg-void border-zinc-800 text-zinc-300 hover:border-zinc-600"
-                          }`}
+                          className={`w-full text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all ${selectedSpotOption === spot
+                            ? "bg-hotPink/15 border-hotPink text-white font-semibold"
+                            : "bg-void border-zinc-800 text-zinc-300 hover:border-zinc-600"
+                            }`}
                         >
                           {selectedSpotOption === spot ? "♥ " : "♡ "}
                           {spot}
@@ -1588,9 +1582,8 @@ export default function BirthdayArcadePage() {
                 key={item.id}
                 type="button"
                 onClick={() => setActiveTab(item.id)}
-                className={`flex flex-col items-center justify-center py-1.5 rounded-xl text-[11px] font-terminal ${
-                  active ? "bg-hotPink/20 text-hotPink border border-hotPink/40" : "text-zinc-400"
-                }`}
+                className={`flex flex-col items-center justify-center py-1.5 rounded-xl text-[11px] font-terminal ${active ? "bg-hotPink/20 text-hotPink border border-hotPink/40" : "text-zinc-400"
+                  }`}
               >
                 <IconComp className="w-4 h-4 mb-0.5" />
                 <span>{item.label}</span>

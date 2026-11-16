@@ -42,7 +42,7 @@ ZONA ATAS: SPESIFIKASI KEBUTUHAN PRODUK (BLUEPRINT AWAL)
 1. **Halaman Utama (Home Dashboard): `"Happy Birthday 25 Babee ! <3"`**
    - Menampilkan judul utama bergaya neon arcade: **`Happy Birthday 25 Babee ! <3`**.
    - Di bawahnya terdapat kartu doa & harapan hangat: *"Selamat ulang tahun yang ke-25 ya sayang! Semoga panjang umur, sehat selalu, kerjaannya makin lancar dan berkah, semua impianmu satu per satu tercapai, dan yang paling penting... makin cinta dan sayang sama aku terus setiap harinya! ❤️"* (Teks ini juga bisa kamu edit lewat PIN `250325`).
-   - Menampilkan **Grid 3 Kartu Status Karakter** (`LEVEL 25 UNLOCKED`, `CO-OP SINCE 25.03.25`, `STATUS: MY FAVORITE PERSON`) dan **4 Tombol Menu Utama** untuk masuk ke masing-masing halaman:
+   - Menampilkan **Grid 3 Kartu Status Karakter** (`LEVEL 25 UNLOCKED`, `CO-OP SINCE 25.03.26`, `STATUS: MY FAVORITE PERSON`) dan **4 Tombol Menu Utama** untuk masuk ke masing-masing halaman:
      - **[Tombol 1] Cerita Perjalanan Cinta Kita**
      - **[Tombol 2] Foto-Foto Kenangan Kita**
      - **[Tombol 3] Play Mini-Game (Unlock Secret Prize!)**
