@@ -927,7 +927,7 @@ export default function BirthdayArcadePage() {
                     OUR ANNIVERSARY
                   </span>
                   <span className="font-pixel text-xs sm:text-sm text-hotPink tabular-nums mt-1 block">
-                    25.03.2025
+                    25.03.2026
                   </span>
                 </div>
 
