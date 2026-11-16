@@ -969,7 +969,7 @@ export default function BirthdayArcadePage() {
                     </h3>
                     <p className="text-xs text-zinc-300 mt-2 leading-relaxed">
                       Baca kembali setiap bab perjalanan cinta kita lengkap dengan foto-foto
-                      kenangannya dari awal kenal, jadian 25 Maret 2025, sampai ulang tahunmu ke-25!
+                      kenangannya dari awal kenal, jadian 25 Maret 2026, sampai ulang tahunmu ke-25!
                     </p>
                     <span className="inline-block mt-3 font-terminal text-sm text-neonGreen">
                       BUKA CERITA KITA &rarr;

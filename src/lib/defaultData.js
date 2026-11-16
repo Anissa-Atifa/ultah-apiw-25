@@ -104,7 +104,7 @@ export const DEFAULT_MEMORY_QUESTS = [
     id: "QST-202611-001",
     questCode: "STAGE 01 // FIRST ENCOUNTER",
     title: "Awal Mula Cerita Kita Dimulai",
-    eventDate: "Sebelum 25 Maret 2025",
+    eventDate: "Sebelum 25 Maret 2026",
     story:
       "Dari obrolan sederhana yang awalnya biasa aja, tiba-tiba berubah jadi notifikasi yang paling aku tunggu setiap hari. Sejak awal ngobrol sama kamu, aku udah ngerasa kalau kamu itu beda dan super nyaman diajak cerita apa aja.",
     badgeText: "+500 SPARK XP",
@@ -115,12 +115,12 @@ export const DEFAULT_MEMORY_QUESTS = [
     id: "QST-202611-002",
     questCode: "STAGE 02 // OFFICIAL CO-OP MODE",
     title: "Hari Jadian Kita Berdua <3",
-    eventDate: "25 Maret 2025",
+    eventDate: "25 Maret 2026",
     story:
-      "Tanggal 25.03.2025 resmi jadi salah satu hari paling membahagiakan buat aku. Hari di mana kita mulai jalan bareng sebagai pasangan, saling jaga, dan jadi tim terbaik buat satu sama lain.",
+      "Tanggal 25.03.2026 resmi jadi salah satu hari paling membahagiakan buat aku. Hari di mana kita mulai jalan bareng sebagai pasangan, saling jaga, dan jadi tim terbaik buat satu sama lain.",
     badgeText: "LOCKED IN: 25.03.25",
     sortOrder: 2,
-    imageUrl: createRomanticSvgDataUri("25 MARET 2025", "OFFICIAL COUPLE <3", "#ff007f")
+    imageUrl: createRomanticSvgDataUri("25 MARET 2026", "OFFICIAL COUPLE <3", "#ff007f")
   },
   {
     id: "QST-202611-003",
