@@ -250,15 +250,15 @@ function PhotoMomentCard({
 
 // Rekomendasi pilihan jam & rute main di Blok M untuk Hari Kamis (bisa dipilih Apiw)
 const BLOK_M_TIME_OPTIONS = [
-  "Kamis Sore (Habis Kerja ~17.00 WIB)",
-  "Kamis Siang / Sore Santai (~15.00 WIB)",
-  "Kamis Malam Dinner & Jalan (~19.00 WIB)",
+  "Kamis Pagi (08.00 WIB)",
+  "Kamis Siang (~11.00 WIB)",
+  "Kamis Sore  (~14.00 WIB)",
   "Bebas Jam Berapa Aja Asal Bareng Kamu <3"
 ];
 
 const BLOK_M_SPOT_OPTIONS = [
-  "Kulineran Blok M (Ramen / Gultik / Claypot) + Photobox Bareng",
-  "Jalan Sore di M Bloc Space + Jajan Kopi / Matcha & Dessert",
+  "Kulineran Blok M (Dimsum / Susu Murni ) + Photobox Bareng",
+  "Jalan Sore di M Bloc Space + Jajan Kopi Dessert",
   "Nongkrong Santai di Taman Literasi Blok M + Hunting Foto Berdua",
   "Surprise Route: Terserah Sayangku, Aku Ikut Ke Mana Aja!"
 ];
