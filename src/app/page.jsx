@@ -267,6 +267,44 @@ export default function BirthdayArcadePage() {
   // Layar Pembuka Mesin Dingdong (Insert Coin / Level 25 Start)
   const [hasEnteredArcade, setHasEnteredArcade] = useState(false);
 
+  // State Pemutar Musik Latar Otomatis (Timur.mp3)
+  const bgmRef = useRef(null);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = new Audio("/Timur.mp3");
+    audio.loop = true;
+    audio.volume = 0.65;
+    audio.preload = "auto";
+    bgmRef.current = audio;
+    return () => {
+      audio.pause();
+    };
+  }, []);
+
+  const handlePressStartArcade = () => {
+    setHasEnteredArcade(true);
+    if (bgmRef.current) {
+      bgmRef.current
+        .play()
+        .then(() => setIsMusicPlaying(true))
+        .catch(() => setIsMusicPlaying(false));
+    }
+  };
+
+  const handleToggleMusic = () => {
+    if (!bgmRef.current) return;
+    if (bgmRef.current.paused) {
+      bgmRef.current
+        .play()
+        .then(() => setIsMusicPlaying(true))
+        .catch(() => {});
+    } else {
+      bgmRef.current.pause();
+      setIsMusicPlaying(false);
+    }
+  };
+
   // Navigasi Halaman Aktif: "dashboard" | "memories" | "photos" | "game" | "date"
   const [activeTab, setActiveTab] = useState("dashboard");
 
@@ -765,7 +803,7 @@ export default function BirthdayArcadePage() {
           <div className="mt-8">
             <button
               type="button"
-              onClick={() => setHasEnteredArcade(true)}
+              onClick={handlePressStartArcade}
               className="arcade-btn w-full sm:w-auto px-8 py-4 rounded-2xl bg-neonGreen text-void font-pixel text-xs sm:text-sm shadow-neonGreen hover:bg-emerald-400"
             >
               ▶ PRESS START (MASUK DASHBOARD)
@@ -838,8 +876,21 @@ export default function BirthdayArcadePage() {
             ))}
           </nav>
 
-          {/* Tombol Refresh & Mode Edit PIN 250325 */}
+          {/* Tombol Refresh & Kontrol Musik Latar (PIN disembunyikan) */}
           <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={handleToggleMusic}
+              title="Putar / Jeda Lagu"
+              className={`arcade-btn inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-terminal border ${
+                isMusicPlaying
+                  ? "bg-neonGreen/20 border-neonGreen text-neonGreen shadow-neonGreen"
+                  : "bg-panel border-zinc-700 text-zinc-300 hover:border-hotPink"
+              }`}
+            >
+              <span>{isMusicPlaying ? "🎵 MUSIC: ON" : "🔇 MUSIC: PAUSE"}</span>
+            </button>
+
             <button
               type="button"
               disabled={isLoadingData}
@@ -848,30 +899,6 @@ export default function BirthdayArcadePage() {
               className="arcade-btn px-3 py-2 rounded-xl bg-panel border border-zinc-700 text-xs font-terminal text-zinc-200 hover:border-cyberCyan hover:text-cyberCyan disabled:opacity-50"
             >
               {isLoadingData ? "SYNCING..." : "REFRESH"}
-            </button>
-
-            <button
-              type="button"
-              onClick={() => {
-                if (isAdminUnlocked) {
-                  setIsAdminUnlocked(false);
-                  try {
-                    sessionStorage.removeItem("apiw_unlocked_pin");
-                  } catch {
-                    // Abaikan
-                  }
-                  showToast("Mode Edit PIN dikunci kembali.");
-                } else {
-                  setShowPinModal(true);
-                }
-              }}
-              className={`arcade-btn inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-terminal border ${isAdminUnlocked
-                ? "bg-neonGreen/20 border-neonGreen text-neonGreen shadow-neonGreen"
-                : "bg-panel border-zinc-700 text-zinc-200 hover:border-hotPink"
-                }`}
-            >
-              <IconLockPin unlocked={isAdminUnlocked} className="w-3.5 h-3.5" />
-              <span>{isAdminUnlocked ? "EDIT ON (250325)" : "PIN"}</span>
             </button>
           </div>
         </div>
@@ -1079,7 +1106,7 @@ export default function BirthdayArcadePage() {
               </div>
 
               <div className="flex items-center gap-2">
-                {isAdminUnlocked ? (
+                {isAdminUnlocked && (
                   <button
                     type="button"
                     onClick={() =>
@@ -1097,14 +1124,6 @@ export default function BirthdayArcadePage() {
                     className="arcade-btn px-4 py-2.5 rounded-xl bg-neonGreen text-void font-pixel text-xs shadow-neonGreen"
                   >
                     + TAMBAH CERITA BARU
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setShowPinModal(true)}
-                    className="arcade-btn px-3.5 py-2 rounded-xl border border-zinc-700 text-xs font-terminal text-zinc-300 hover:border-neonGreen"
-                  >
-                    {/* Buka PIN (250325) untuk Tambah/Edit Cerita &amp; Foto */}
                   </button>
                 )}
               </div>
@@ -1233,7 +1252,7 @@ export default function BirthdayArcadePage() {
               </div>
 
               <div>
-                {isAdminUnlocked ? (
+                {isAdminUnlocked && (
                   <button
                     type="button"
                     onClick={() =>
@@ -1248,14 +1267,6 @@ export default function BirthdayArcadePage() {
                     className="arcade-btn px-4 py-2.5 rounded-xl bg-cyberCyan text-void font-pixel text-xs shadow-cyberCyan"
                   >
                     + TAMBAH MOMEN (BISA BANYAK FOTO)
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setShowPinModal(true)}
-                    className="arcade-btn px-3.5 py-2 rounded-xl border border-zinc-700 text-xs font-terminal text-zinc-300 hover:border-cyberCyan"
-                  >
-                    Buka PIN (250325) untuk Upload Banyak Foto
                   </button>
                 )}
               </div>

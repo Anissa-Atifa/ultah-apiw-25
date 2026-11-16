@@ -188,9 +188,9 @@ export const DEFAULT_PHOTO_VAULT = [
 export const DEFAULT_BIRTHDAY_WISHES = [
   {
     id: "WSH-20261117-001",
-    senderName: "Pacarmu Tersayang (Player 2) <3",
+    senderName: "Caca Pacarmu Tersayang (Player 2) <3",
     dateStatus: "UNDANGAN KAMIS SIAP! 💖",
-    preferredSpot: "Bebas jam berapa aja asal bareng Apiw di Blok M!",
+    preferredSpot: "Bebas jam berapa aja asal bareng Apis di Blok M!",
     message:
       "Happy 25th Birthday Babee! Jangan lupa mainin mini-gamenya sampai tembus 1.000 poin (awas jangan kena bug 3x nanti meledak!) buat buka hadiah rahasia & barcode Spotify dariku, terus isi konfirmasi ngedate hari Kamis di Blok M di sini yaa! Love youuu!",
     createdAt: "17/11/2026 00:01:00"
